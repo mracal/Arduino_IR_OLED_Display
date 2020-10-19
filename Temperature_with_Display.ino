@@ -4,6 +4,18 @@
 #include <Wire.h>
 #include <Adafruit_MLX90614.h>
 
+//Wiring I2C
+//  A4 - SDA
+//  A5 - SCLK
+//
+//Wiring SPI
+//  CLK   - 13
+//  DATA  - 11
+//  CS    - 10
+//  DC    - 9
+//  RESET - 8
+
+
 //IR Temperature
 Adafruit_MLX90614 mlx = Adafruit_MLX90614();
 
@@ -20,7 +32,7 @@ void setup() {
   Serial.begin(9600);
   pinMode(buttonPin, INPUT);
   
-  Serial.println("Adafruit MLX90614 test");  
+  Serial.println("BITSOC MLX90614 Temperature with OLED Display");  
   
    
   u8g2.begin();
